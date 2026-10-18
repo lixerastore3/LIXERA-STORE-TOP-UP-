@@ -3,49 +3,43 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050914">
 <title>LIXERA TOP UP</title>
 <style>
-:root{--bg:#050914;--panel:#0c1729;--blue:#087cff;--cyan:#35d8ff;--white:#edf6ff;--muted:#96aac5;--line:#203654}
+:root{--bg:#050914;--panel:#0c1729;--blue:#087cff;--cyan:#35d8ff;--text:#edf6ff;--muted:#96aac5;--line:#203654}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(ellipse at top,#11284b 0,#050914 60%);color:var(--white);font-family:Arial,sans-serif}
-header{text-align:center;padding:26px 14px 22px;border-bottom:1px solid var(--line)}
-.logo{font-size:30px;font-weight:900;letter-spacing:3px;text-shadow:0 0 18px #168bff}
+body{margin:0;background:radial-gradient(ellipse at top,#11284b,#050914 60%);color:var(--text);font-family:Arial,sans-serif}
+header{text-align:center;padding:25px 14px;border-bottom:1px solid var(--line)}
+.logo{font-size:30px;font-weight:900;letter-spacing:3px;text-shadow:0 0 18px var(--blue)}
 .logo span{color:var(--cyan)}
-header p{color:var(--muted);font-size:13px;margin:8px 0 0}
+header p{color:var(--muted);font-size:13px}
 main{max-width:1100px;margin:auto;padding:18px 14px 40px}
-.hero{padding:23px 19px;border:1px solid #17508c;border-radius:18px;background:linear-gradient(130deg,#102d52,#0a1323 75%);margin-bottom:20px}
-.hero h1{font-size:24px;margin:0 0 9px}
-.hero p{margin:0;color:#b7cbe5;line-height:1.6;font-size:14px}
+.hero{padding:22px;border:1px solid #17508c;border-radius:17px;background:linear-gradient(130deg,#102d52,#0a1323);margin-bottom:20px}
+.hero h1{font-size:23px;margin:0 0 8px}.hero p{font-size:14px;line-height:1.6;color:#b7cbe5;margin:0}
 h2{font-size:19px;margin:0 0 13px}
-.search,input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid var(--line);background:#080f1d;color:white;font-size:14px;outline:none}
+input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid var(--line);background:#080f1d;color:white;font-size:14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan)}
 .search{margin-bottom:18px}
-input:focus,select:focus,textarea:focus,.search:focus{border-color:var(--cyan)}
 .games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.game{padding:14px 11px;min-height:78px;text-align:left;color:white;background:var(--panel);border:1px solid var(--line);border-radius:12px;cursor:pointer}
-.game strong{display:block;font-size:14px}
-.game small{display:block;color:var(--muted);font-size:11px;margin-top:6px}
+.game{padding:14px 11px;min-height:76px;text-align:left;color:white;background:var(--panel);border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.game strong{display:block;font-size:14px}.game small{display:block;color:var(--muted);font-size:11px;margin-top:6px}
 .game.active,.product.selected{border-color:var(--cyan);background:#102847;box-shadow:0 0 13px #087cff26}
-.section{margin-top:24px}
-.sub{font-size:12px;color:var(--muted);line-height:1.6;margin:-5px 0 13px}
+.section{margin-top:24px}.sub{font-size:12px;color:var(--muted);line-height:1.6;margin:-5px 0 13px}
 .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .product{padding:13px;text-align:left;background:#0b1425;color:white;border:1px solid var(--line);border-radius:12px;cursor:pointer;min-width:0}
-.product strong{display:block;font-size:13px;line-height:1.5}
-.product span{display:block;margin-top:8px;color:var(--cyan);font-size:14px;font-weight:bold}
+.product strong{display:block;font-size:13px;line-height:1.5}.product span{display:block;margin-top:8px;color:var(--cyan);font-size:14px;font-weight:bold}
 .product small{display:block;margin-top:6px;color:var(--muted);font-size:11px}
 .card{margin-top:18px;padding:17px;background:#0b1425;border:1px solid var(--line);border-radius:15px}
 label{display:block;font-size:13px;color:#b8cbe2;margin:13px 0 7px}
 .muted{font-size:12px;color:var(--muted);line-height:1.6}
 .payments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .pay{padding:13px;background:#080f1d;border:1px solid var(--line);border-radius:10px}
-.pay strong{color:var(--cyan)}
-.pay p{font-size:13px;margin:7px 0}
+.pay strong{color:var(--cyan)}.pay p{font-size:13px;margin:7px 0}
 .qris{display:block;width:100%;max-width:290px;margin:16px auto;border-radius:10px;background:white}
 .primary{width:100%;padding:15px;margin-top:16px;border:0;border-radius:11px;background:linear-gradient(90deg,#0877ff,#20c8ff);color:white;font-size:14px;font-weight:bold;cursor:pointer}
 .notice{margin-top:13px;padding:12px;background:#101f35;border-radius:10px;font-size:12px;line-height:1.7;color:#c2d7f2;overflow-wrap:anywhere}
 footer{text-align:center;padding:22px 12px;border-top:1px solid var(--line);color:#7389a8;font-size:12px}
-.hidden{display:none!important}
 @media(min-width:650px){.games{grid-template-columns:repeat(3,minmax(0,1fr))}.products{grid-template-columns:repeat(3,minmax(0,1fr))}.payments{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
@@ -54,14 +48,13 @@ footer{text-align:center;padding:22px 12px;border-top:1px solid var(--line);colo
   <div class="logo">LIXERA <span>TOP UP</span></div>
   <p>TOP UP GAME • CEPAT • PRAKTIS</p>
 </header>
-
 <main>
   <section class="hero">
     <h1>Kebutuhan Gaming Kamu, Satu Tempat.</h1>
-    <p>Pilih game dan paket, masukkan ID pemain, lalu lanjutkan pesanan ke admin LIXERA melalui WhatsApp.</p>
+    <p>Pilih game, cari nominal, isi ID pemain, lalu pesan melalui WhatsApp admin LIXERA.</p>
   </section>
 
-  <input id="search" class="search" placeholder="Cari game..." autocomplete="off">
+  <input id="search" class="search" placeholder="Cari game atau nominal..." autocomplete="off">
 
   <section>
     <h2>Pilih Game</h2>
@@ -69,8 +62,8 @@ footer{text-align:center;padding:22px 12px;border-top:1px solid var(--line);colo
   </section>
 
   <section class="section">
-    <h2 id="catalogTitle">Pilih Paket</h2>
-    <p class="sub">Pilih paket yang sesuai. Harga paket yang belum tersedia akan ditampilkan sebagai Cek Harga.</p>
+    <h2 id="catalogTitle">Semua Paket</h2>
+    <p class="sub">Harga jual mencakup tambahan Rp1.500 untuk paket GoPay yang sudah dihitung sebelumnya. Paket belum terverifikasi diberi label Cek Harga.</p>
     <div id="products" class="products"></div>
   </section>
 
@@ -79,293 +72,202 @@ footer{text-align:center;padding:22px 12px;border-top:1px solid var(--line);colo
     <form id="orderForm">
       <label for="playerId">ID Pemain / User ID *</label>
       <input id="playerId" required placeholder="Masukkan ID pemain">
-
-      <div id="serverWrap">
-        <label for="serverId">Server ID (jika diperlukan)</label>
-        <input id="serverId" placeholder="Masukkan Server ID jika ada">
-      </div>
-
+      <label for="serverId">Server ID (jika diperlukan)</label>
+      <input id="serverId" placeholder="Masukkan Server ID jika ada">
       <label for="nickname">Nickname (opsional)</label>
-      <input id="nickname" placeholder="Masukkan nickname">
-
+      <input id="nickname" placeholder="Nickname game">
       <label for="payment">Metode Pembayaran *</label>
       <select id="payment" required>
-        <option value="">Pilih metode pembayaran</option>
-        <option>DANA</option>
-        <option>GoPay</option>
-        <option>QRIS</option>
+        <option value="">Pilih pembayaran</option>
+        <option>DANA</option><option>GoPay</option><option>QRIS</option>
       </select>
-
       <label for="note">Catatan (opsional)</label>
       <textarea id="note" rows="2" placeholder="Catatan untuk admin"></textarea>
-
-      <div class="notice" id="summary">Pilih game dan paket terlebih dahulu.</div>
-      <button type="submit" class="primary">ORDER VIA WHATSAPP</button>
+      <div id="summary" class="notice">Pilih game dan paket terlebih dahulu.</div>
+      <button class="primary" type="submit">ORDER VIA WHATSAPP</button>
     </form>
   </section>
 
   <section class="card section">
     <h2>Pembayaran</h2>
     <div class="payments">
-      <div class="pay">
-        <strong>DANA</strong>
-        <p>083165700636</p>
-        <p class="muted">Nama: YAXXX</p>
-      </div>
-      <div class="pay">
-        <strong>GoPay</strong>
-        <p>083165700636</p>
-        <p class="muted">Nama: YAXXX</p>
-      </div>
-      <div class="pay">
-        <strong>QRIS</strong>
-        <p class="muted">Scan kode QR di bawah.</p>
-      </div>
+      <div class="pay"><strong>DANA</strong><p>083165700636</p><p class="muted">Nama: YAXXX</p></div>
+      <div class="pay"><strong>GoPay</strong><p>083165700636</p><p class="muted">Nama: YAXXX</p></div>
+      <div class="pay"><strong>QRIS</strong><p class="muted">Scan kode QR di bawah.</p></div>
     </div>
     <img class="qris" src="IMG-20261010-WA0017.jpg" alt="QRIS LIXERA" onerror="this.style.display='none'">
-    <p class="muted" style="text-align:center">Pastikan nama penerima dan nominal sudah benar. Kirim bukti pembayaran kepada admin setelah transaksi.</p>
+    <p class="muted" style="text-align:center">Pastikan nominal dan penerima benar. Konfirmasikan pesanan dengan admin sebelum membayar.</p>
   </section>
 </main>
-
 <footer>© LIXERA TOP UP • DIGITAL GAMING STORE</footer>
 
 <script>
-const ADMINS = [
-  "573123253419",
-  "628818238317"
+const ADMINS=["573123253419","628818238317"];
+
+// null = harga harus dikonfirmasi admin.
+// Angka di bawah adalah harga jual dalam Rupiah.
+const data=[
+{name:"Mobile Legends",category:"Diamond MLBB",items:[
+["5 Diamond",3107],["10 Diamond",5102],["12 Diamond",5250],["19 Diamond",null],
+["28 Diamond",null],["44 Diamond",null],["59 Diamond",18644],["86 Diamond",null],
+["110 Diamond",38266],["172 Diamond",null],["257 Diamond",null],["277 Diamond",92712],
+["344 Diamond",null],["429 Diamond",null],["514 Diamond",null],["568 Diamond",162225],
+["706 Diamond",null],["1.050 Diamond",null],["2.195 Diamond",null],
+["Weekly Diamond Pass",32719],["Twilight Pass",null],["Paket Diamond lainnya",null]
+]},
+{name:"Free Fire",category:"Diamond / Membership",items:[
+["5 Diamond",2500],["10 Diamond",3338],["12 Diamond",3500],["20 Diamond",5500],
+["30 Diamond",null],["50 Diamond",9500],["70 Diamond",11500],["75 Diamond",null],
+["100 Diamond",17500],["120 Diamond",19501],["130 Diamond",null],["140 Diamond",21500],
+["150 Diamond",23500],["200 Diamond",31501],["280 Diamond",41500],["355 Diamond",51500],
+["500 Diamond",72500],["720 Diamond",101500],["1.000 Diamond",141500],
+["1.450 Diamond",201500],["2.180 Diamond",301500],["3.640 Diamond",null],
+["Membership Mingguan",null],["Membership Bulanan",null],["Paket Diamond lainnya",null]
+]},
+{name:"Roblox",category:"Robux / Gift Card",items:[
+["50 Robux",21500],["100 Robux",34901],["200 Robux",null],["400 Robux",null],
+["500 Robux",null],["800 Robux",172723],["1.000 Robux",null],["1.700 Robux",null],
+["2.000 Robux",428844],["4.500 Robux",951353],["10.000 Robux",1931435],
+["Gift Card Rp10.000",null],["Gift Card Rp25.000",null],["Gift Card Rp50.000",51500],
+["Gift Card Rp65.000",66500],["Gift Card Rp100.000",101500],
+["Gift Card Rp200.000",null],["Gift Card Rp500.000",null]
+]},
+{name:"PUBG Mobile",category:"Unknown Cash (UC)",items:[
+["35 UC",null],["50 UC",null],["60 UC",18293],["120 UC",35087],
+["180 UC",null],["300 UC",null],["300 + 25 UC",86230],["325 UC",null],
+["600 UC",null],["600 + 60 UC",171150],["660 UC",null],["900 UC",null],
+["1.500 UC",null],["1.500 + 300 UC",425912],["1.800 UC",null],
+["3.000 UC",null],["3.000 + 850 UC",850515],["6.000 UC",null],
+["12.000 UC",null],["18.000 UC",null],["Prime Subscription",null],
+["Paket UC lainnya",null]
+]},
+{name:"Honor of Kings",category:"Tokens",items:[
+["16 Tokens",null],["40 Tokens",null],["80 Tokens",17500],["160 Tokens",null],
+["240 Tokens",48831],["400 Tokens",81500],["560 Tokens",110500],
+["800 + 30 Tokens",161500],["1.200 + 45 Tokens",238157],
+["2.400 + 108 Tokens",481500],["4.000 + 180 Tokens",801500],
+["8.000 + 360 Tokens",1600500],["Weekly Card",null],["Paket Tokens lainnya",null]
+]},
+{name:"Genshin Impact",category:"Genesis Crystals / Welkin",items:[
+["60 Genesis Crystals",18001],["300 + 30 Crystals",82500],
+["980 + 110 Crystals",256500],["1.980 + 260 Crystals",490500],
+["3.280 + 600 Crystals",816500],["6.480 + 1.600 Crystals",1630500],
+["Blessing of the Welkin Moon",82500],["Paket Genesis Crystals lainnya",null]
+]},
+{name:"COD Mobile",category:"CP",items:[
+["26 CP",null],["31 CP",null],["53 CP",null],["63 CP",11500],
+["106 CP",null],["112 CP",null],["128 CP",21501],["160 CP",null],
+["321 CP",51502],["320 CP",null],["645 CP",101505],["800 CP",null],
+["1.373 CP",201510],["2.060 CP",301515],["3.564 CP",501524],
+["7.656 CP",1001549],["Paket CP lainnya",null]
+]},
+{name:"FC Mobile",category:"FC Points / Coins",items:[
+["40 FC Points",5000],["100 FC Points",12000],["520 FC Points",55000],
+["1.070 FC Points",105000],["2.200 FC Points",205000],
+["5.750 FC Points",510000],["12.000 FC Points",1000000],
+["40K Coins",5000],["100K Coins",10000],["250K Coins",25000],
+["500K Coins",50000],["1M Coins",100000],["Paket lainnya",null]
+]},
+{name:"Delta Force",category:"Delta Coins",items:[
+["60 Delta Coins",5000],["300 Delta Coins",15000],["420 Delta Coins",20000],
+["680 Delta Coins",30000],["1.280 Delta Coins",55000],
+["1.960 Delta Coins",80000],["3.300 Delta Coins",130000],
+["6.480 Delta Coins",250000],["12.800 Delta Coins",490000],
+["Paket Delta Coins lainnya",null]
+]},
+{name:"Magic Chess: Go Go",category:"Diamond / Weekly Card",items:[
+["5 Diamond",3365],["12 Diamond",5603],["19 Diamond",7840],
+["28 Diamond",10824],["44 Diamond",16418],["59 Diamond",21268],
+["85 Diamond",30219],["170 Diamond",58939],["240 Diamond",82436],
+["296 Diamond",96982],["408 Diamond",138383],["568 Diamond",189108],
+["875 Diamond",290185],["2.010 Diamond",638547],
+["3.288 Diamond",729000],["4.830 Diamond",1494532],
+["Weekly Card",33001],["Paket Diamond lainnya",null]
+]}
 ];
 
-const gamesData = [
-  {
-    name:"Mobile Legends",
-    category:"Diamond MLBB",
-    items:[
-      ["5 Diamond",3107],["10 Diamond",5102],["12 Diamond",5250],
-      ["59 Diamond",18644],["110 Diamond",38266],["277 Diamond",92712],
-      ["568 Diamond",162225],["Weekly Diamond Pass",32719]
-    ]
-  },
-  {
-    name:"Free Fire",
-    category:"Diamond FF",
-    items:[
-      ["5 Diamond",2500],["10 Diamond",3338],["12 Diamond",3500],
-      ["20 Diamond",5500],["50 Diamond",9500],["70 Diamond",11500],
-      ["100 Diamond",17500],["120 Diamond",19501],["140 Diamond",21500],
-      ["150 Diamond",23500],["200 Diamond",31501],["280 Diamond",41500],
-      ["355 Diamond",51500],["500 Diamond",72500],["720 Diamond",101500],
-      ["1.000 Diamond",141500],["1.450 Diamond",201500],["2.180 Diamond",301500]
-    ]
-  },
-  {
-    name:"Roblox",
-    category:"Robux / Gift Card",
-    items:[
-      ["50 Robux",21500],["100 Robux",34901],["800 Robux",172723],
-      ["2.000 Robux",428844],["4.500 Robux",951353],
-      ["10.000 Robux",1931435],["Gift Card Rp50.000",51500],
-      ["Gift Card Rp65.000",66500],["Gift Card Rp100.000",101500]
-    ]
-  },
-  {
-    name:"PUBG Mobile",
-    category:"Unknown Cash (UC)",
-    items:[
-      ["60 UC",18293],["120 UC",35087],["300 + 25 UC",86230],
-      ["600 + 60 UC",171150],["1.500 + 300 UC",425912],
-      ["3.000 + 850 UC",850515]
-    ]
-  },
-  {
-    name:"Honor of Kings",
-    category:"Tokens",
-    items:[
-      ["80 Tokens",17500],["240 Tokens",48831],["400 Tokens",81500],
-      ["560 Tokens",110500],["800 + 30 Tokens",161500],
-      ["1.200 + 45 Tokens",238157],["2.400 + 108 Tokens",481500],
-      ["4.000 + 180 Tokens",801500],["8.000 + 360 Tokens",1600500]
-    ]
-  },
-  {
-    name:"Genshin Impact",
-    category:"Genesis Crystals",
-    items:[
-      ["60 Genesis Crystals",18001],["300 + 30 Crystals",82500],
-      ["980 + 110 Crystals",256500],["1.980 + 260 Crystals",490500],
-      ["3.280 + 600 Crystals",816500],["6.480 + 1.600 Crystals",1630500],
-      ["Blessing of the Welkin Moon",82500]
-    ]
-  },
-  {
-    name:"COD Mobile",
-    category:"CP",
-    items:[
-      ["63 CP",11500],["128 CP",21501],["321 CP",51502],
-      ["645 CP",101505],["1.373 CP",201510],["2.060 CP",301515],
-      ["3.564 CP",501524],["7.656 CP",1001549]
-    ]
-  },
-  {
-    name:"FC Mobile",
-    category:"FC Points / Coins",
-    items:[
-      ["40 FC Points",5000],["100 FC Points",12000],
-      ["520 FC Points",55000],["1.070 FC Points",105000],
-      ["2.200 FC Points",205000],["5.750 FC Points",510000],
-      ["12.000 FC Points",1000000],
-      ["40K Coins",5000],["100K Coins",10000],
-      ["250K Coins",25000],["500K Coins",50000],["1M Coins",100000]
-    ]
-  },
-  {
-    name:"Delta Force",
-    category:"Delta Coins",
-    items:[
-      ["60",5000],["300",15000],["420",20000],["680",30000],
-      ["1.280",55000],["1.960",80000],["3.300",130000],
-      ["6.480",250000],["12.800",490000]
-    ]
-  },
-  {
-    name:"Magic Chess: Go Go",
-    category:"Diamond / Weekly Card",
-    items:[
-      ["Weekly Card",33001],["5 Diamond",3365],["12 Diamond",5603],
-      ["19 Diamond",7840],["28 Diamond",10824],["44 Diamond",16418],
-      ["59 Diamond",21268],["85 Diamond",30219],["170 Diamond",58939],
-      ["240 Diamond",82436],["296 Diamond",96982],["408 Diamond",138383],
-      ["568 Diamond",189108],["875 Diamond",290185],
-      ["2.010 Diamond",638547],["3.288 Diamond",729000],
-      ["4.830 Diamond",1494532]
-    ]
-  }
-];
-
-const rupiah = n => "Rp" + Number(n).toLocaleString("id-ID");
-const gamesEl = document.getElementById("games");
-const productsEl = document.getElementById("products");
-const searchEl = document.getElementById("search");
-const titleEl = document.getElementById("catalogTitle");
-const summaryEl = document.getElementById("summary");
-
-let selectedGame = null;
-let selectedProduct = null;
+const money=n=>"Rp"+Number(n).toLocaleString("id-ID");
+const gamesEl=document.getElementById("games");
+const productsEl=document.getElementById("products");
+const searchEl=document.getElementById("search");
+const titleEl=document.getElementById("catalogTitle");
+const summaryEl=document.getElementById("summary");
+let chosenGame=null,chosenProduct=null;
 
 function renderGames(){
-  const term = searchEl.value.trim().toLowerCase();
-  gamesEl.innerHTML = "";
-
-  gamesData.filter(g => g.name.toLowerCase().includes(term) ||
-    g.category.toLowerCase().includes(term)).forEach(g => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "game" + (selectedGame && selectedGame.name === g.name ? " active" : "");
-      button.innerHTML = "<strong>" + g.name + "</strong><small>" + g.category + "</small>";
-      button.addEventListener("click", () => {
-        selectedGame = g;
-        selectedProduct = null;
-        renderGames();
-        renderProducts();
-        updateSummary();
-      });
-      gamesEl.appendChild(button);
-    });
-}
-
-function renderProducts(){
-  productsEl.innerHTML = "";
-
-  if(!selectedGame){
-    titleEl.textContent = "Pilih Paket";
-    productsEl.innerHTML = '<p class="muted">Pilih salah satu game di atas untuk melihat paket.</p>';
-    return;
-  }
-
-  titleEl.textContent = "Paket " + selectedGame.name;
-
-  selectedGame.items.forEach(item => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "product" +
-      (selectedProduct && selectedProduct.name === item[0] ? " selected" : "");
-
-    const price = typeof item[1] === "number" ? rupiah(item[1]) : "Cek Harga";
-    button.innerHTML = "<strong>" + item[0] + "</strong><span>" + price +
-      "</span><small>" + (typeof item[1] === "number" ? "Harga jual LIXERA" : "Hubungi admin") + "</small>";
-
-    button.addEventListener("click", () => {
-      selectedProduct = {name:item[0], price:item[1]};
-      renderProducts();
-      updateSummary();
-    });
-
-    productsEl.appendChild(button);
+  const q=searchEl.value.trim().toLowerCase();
+  gamesEl.innerHTML="";
+  data.filter(g=>(g.name+" "+g.category).toLowerCase().includes(q)).forEach(g=>{
+    const b=document.createElement("button");
+    b.type="button";
+    b.className="game"+(chosenGame===g?" active":"");
+    b.innerHTML="<strong>"+g.name+"</strong><small>"+g.category+"</small>";
+    b.onclick=()=>{chosenGame=g;chosenProduct=null;renderGames();renderProducts();updateSummary()};
+    gamesEl.appendChild(b);
   });
 }
 
-function updateSummary(){
-  if(!selectedGame || !selectedProduct){
-    summaryEl.textContent = "Pilih game dan paket terlebih dahulu.";
+function renderProducts(){
+  productsEl.innerHTML="";
+  if(!chosenGame){
+    titleEl.textContent="Semua Paket";
+    productsEl.innerHTML='<p class="muted">Pilih game untuk melihat nominal.</p>';
     return;
   }
-
-  const price = typeof selectedProduct.price === "number"
-    ? rupiah(selectedProduct.price)
-    : "Konfirmasi ke admin";
-
-  summaryEl.innerHTML =
-    "<strong>Ringkasan Pesanan</strong><br>" +
-    "Game: " + selectedGame.name + "<br>" +
-    "Paket: " + selectedProduct.name + "<br>" +
-    "Harga: " + price;
+  titleEl.textContent="Paket "+chosenGame.name;
+  const q=searchEl.value.trim().toLowerCase();
+  const list=chosenGame.items.filter(x=>x[0].toLowerCase().includes(q));
+  list.forEach(item=>{
+    const b=document.createElement("button");
+    b.type="button";
+    const selected=chosenProduct&&chosenProduct.name===item[0];
+    b.className="product"+(selected?" selected":"");
+    b.innerHTML="<strong>"+item[0]+"</strong><span>"+
+      (item[1]===null?"Cek Harga":money(item[1]))+
+      "</span><small>"+(item[1]===null?"Konfirmasi ke admin":"Harga jual LIXERA")+"</small>";
+    b.onclick=()=>{chosenProduct={name:item[0],price:item[1]};renderProducts();updateSummary()};
+    productsEl.appendChild(b);
+  });
+  if(!list.length)productsEl.innerHTML='<p class="muted">Nominal tidak ditemukan.</p>';
 }
 
-searchEl.addEventListener("input", renderGames);
+function updateSummary(){
+  if(!chosenGame||!chosenProduct){
+    summaryEl.textContent="Pilih game dan paket terlebih dahulu.";
+    return;
+  }
+  summaryEl.innerHTML="<strong>Ringkasan Pesanan</strong><br>Game: "+
+    chosenGame.name+"<br>Paket: "+chosenProduct.name+"<br>Harga: "+
+    (chosenProduct.price===null?"Cek Harga — konfirmasi admin":money(chosenProduct.price));
+}
 
-document.getElementById("orderForm").addEventListener("submit", function(e){
+searchEl.addEventListener("input",()=>{renderGames();renderProducts()});
+
+document.getElementById("orderForm").addEventListener("submit",e=>{
   e.preventDefault();
-
-  if(!selectedGame || !selectedProduct){
-    alert("Pilih game dan paket terlebih dahulu.");
-    return;
-  }
-
-  const playerId = document.getElementById("playerId").value.trim();
-  const serverId = document.getElementById("serverId").value.trim();
-  const nickname = document.getElementById("nickname").value.trim();
-  const payment = document.getElementById("payment").value;
-  const note = document.getElementById("note").value.trim();
-
-  if(!playerId || !payment){
-    alert("Isi ID pemain dan metode pembayaran.");
-    return;
-  }
-
-  const isCheckPrice = typeof selectedProduct.price !== "number";
-  const priceText = isCheckPrice
-    ? "Cek Harga - mohon konfirmasi kepada admin"
-    : rupiah(selectedProduct.price);
-
-  const message =
-`HALO ADMIN LIXERA TOP UP 👋
+  if(!chosenGame||!chosenProduct){alert("Pilih game dan paket terlebih dahulu.");return}
+  const player=document.getElementById("playerId").value.trim();
+  const server=document.getElementById("serverId").value.trim();
+  const nickname=document.getElementById("nickname").value.trim();
+  const payment=document.getElementById("payment").value;
+  const note=document.getElementById("note").value.trim();
+  const price=chosenProduct.price===null?"CEK HARGA - KONFIRMASI ADMIN":money(chosenProduct.price);
+  const msg=`HALO ADMIN LIXERA TOP UP
 
 Saya ingin memesan top up game.
 
-Game: ${selectedGame.name}
-Paket: ${selectedProduct.name}
-ID Pemain: ${playerId}
-Server ID: ${serverId || "-"}
-Nickname: ${nickname || "-"}
-Harga: ${priceText}
+Game: ${chosenGame.name}
+Paket: ${chosenProduct.name}
+ID Pemain: ${player}
+Server ID: ${server||"-"}
+Nickname: ${nickname||"-"}
+Harga: ${price}
 Pembayaran: ${payment}
-Catatan: ${note || "-"}
+Catatan: ${note||"-"}
 
-Mohon konfirmasi detail pesanan dan total pembayaran sebelum saya membayar.
-Terima kasih.`;
-
-  const admin = isCheckPrice ? ADMINS[0] : ADMINS[1];
-  const url = "https://wa.me/" + admin + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
+Mohon konfirmasi detail pesanan dan total pembayaran sebelum saya membayar.`;
+  const admin=chosenProduct.price===null?ADMINS[0]:ADMINS[1];
+  window.open("https://wa.me/"+admin+"?text="+encodeURIComponent(msg),"_blank");
 });
 
 renderGames();
